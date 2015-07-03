@@ -62,8 +62,7 @@
   (magit-with-toplevel
     (--remove (member (file-name-extension it)
                       magit-find-file-ignore-extensions)
-              (magit-git-lines "ls-files" "--cached"
-                               "--other" "--exclude-standard"))))
+              (magit-list-files))))
 
 ;;;###autoload
 (defun magit-find-file-completing-read ()
